@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; vertical-align: middle; }
+table { border-collapse: collapse; width: 100%; }
+ul { list-style-type: none; }
+.row { max-width: 980px; margin: 0 auto; }
+
+body { color: #666; }
+
+html, body, #wrap { height: 100%; }
+
+#header { background: url(../img/wedding_couple.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    position: relative; /* 글자를 중앙에 정렬하기 위해 */
+}
+#header #title { color:#fff; text-align: center; 
+    position: absolute; /* 글자를 중앙에 정렬하기 위해 */
+    top: 50%;
+    left: 50%;
+    /* background: green; */
+    margin-left: -191px; /* margin만 (-)음수값을 줄 수 있음 */
+    margin-top: -112.5px;
+}
+#header h1 { font-size: 64px; }
+#header p { font-size: 30px;
+    margin: 20px 0px;
+}
+#nav { 
+    background: rgba(255,255,255,0.75);
+    padding: 5px 10px;
+    position: fixed; /* 네비를 하단에 고정 */
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+}
+#nav li {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+#nav li a {
+    display: block;
+    padding: 10px 0px;
+}
+#nav li:hover a {
+    background: rgba(200,200,200,1);
+}
+#nav li:last-child:hover a { 
+    background: rgba(0,0,0,1); 
+    color: #fff;
+}
+/* #section { 
+    background: #fdd;
+} */
+#section h2 { 
+    color: #757575;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 64px;
+}
+#section img { width: 100%; border-radius: 5px; }
+.article1, .article3, .article4 { 
+    padding: 64px 16px; /* 980px이하로 창이 줄었을 때의 여백 */
+    background: #fdd;
+}
+.article1 p {
+    padding: 48px 0px;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 2; /* 줄간격 */
+}
+.btn { text-align: center;} /* 부모에게 정렬 값 */
+.btn a {
+    font-size: 18px;
+    padding: 18px 24px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px; /*모서리 둥글게 */
+    display: inline-block /* 부모에게 정렬 값을 주기 위해 */
+}
+.btn a:hover { background: #ccc; color: #000;}
+/* <button>태그는 폼박스의 입력한 내용을 실제로 전송,
+링크페이지로 이동하는 버튼은 <a>태그 작성 */
+/* 부모와 자식의 넓이가 같을때는 부모한테 hover를 주고, 넓이가 다를 때는 자식(자기자신)한테 hover를 준다 */
+#section, .article2 {
+    height: 100%
+}
+.article2 {
+    background: url(../img/flowers.jpg) no-repeat center;
+    background-size: cover;
+    color : #fff;
+    text-align: center;
+    position: relative;
+}
+.article2 .article2_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* background: green; */
+    margin-left: -226px;
+    margin-top: -82.5px;
+}
+.article2 p:first-child {
+    font-size: 64px;
+    padding-bottom: 40px;
+}
+.article2 p:last-child {
+    font-size: 30px;
+}
+.article3 .location { 
+    display: table; width: 100%;
+    padding-top: 64px;
+    text-align: center;
+    font-size: 15px;
+}
+.article3 .location > div { 
+     display: table-cell; /* 빈틈을 없애줌 */
+     width: 50%;
+}
+.article3 h3 {
+     font-size: 30px;
+}
+.article3 .location > div p:nth-of-type(1) {
+     margin: 20px 0px;
+}
+#header, .article1, .article2, .article3 { 
+     filter: grayscale(50%);
+}
+.article4 {
+    text-align: center;
+}
+.article4 p:nth-of-type(1) {
+    font-size: 36px;
+}
+.article4 p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 25px 0px 30px;
+}
+.article4 .btn a {
+    padding: 18px 60px;
+    background: #f44336;
+    opacity: 0.6;
+    font-size: 24px;
+}
+.article4 .btn a:hover {
+    background: #ccc;
+    color: #000;
+}
+/* footer의 형이었던 section의 높이를 100%로 설정하면,
+   footer는 section의 자식들 밑에 숨어서 안보이게 됨.
+   이럴 때는 footer를 section의 동생이 아닌, 마지막 자식으로 변경. 
+*/
+#footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0px 70px;
+    margin-bottom: 30px;
+}
+#footer a {
+    text-decoration: underline;
+}
+#footer a:hover {
+    color: green;
+}
